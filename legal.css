@@ -2,8 +2,8 @@
   color-scheme: light dark;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.75;
-  color: #21312b;
-  background: #f5f7f5;
+  color: #475253;
+  background: #f8f7f4;
 }
 
 * {
@@ -15,7 +15,7 @@ body {
 }
 
 a {
-  color: #287a5b;
+  color: #536f61;
   overflow-wrap: anywhere;
   text-underline-offset: 0.18em;
 }
@@ -33,7 +33,7 @@ a:focus-visible {
 .site-header,
 .site-footer,
 main {
-  width: min(100% - 32px, 760px);
+  width: min(100% - 40px, 780px);
   margin-inline: auto;
 }
 
@@ -43,26 +43,52 @@ main {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 18px 4px 0;
+  padding: 24px 4px 0;
 }
 
 .brand {
-  color: inherit;
-  font-size: 15px;
-  font-weight: 650;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #2f3939;
   text-decoration: none;
+}
+
+.brand img {
+  flex: none;
+}
+
+.brand-copy {
+  display: grid;
+  line-height: 1.1;
+}
+
+.brand-copy strong {
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+}
+
+.brand-copy span {
+  margin-top: 3px;
+  color: #7d8784;
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 8px 16px;
+  gap: 7px 15px;
+  font-size: 13px;
 }
 
 .site-nav a,
 .site-footer a {
-  color: #287a5b;
+  color: #536f61;
 }
 
 .site-nav a[aria-current="page"] {
@@ -71,21 +97,24 @@ main {
 }
 
 main {
-  margin-block: 24px;
-  padding: 32px;
+  margin-block: 30px;
+  padding: 42px;
   background: #ffffff;
-  border: 1px solid #e5eae7;
-  border-radius: 18px;
+  border: 1px solid rgba(109, 146, 127, 0.14);
+  border-radius: 24px;
+  box-shadow: 0 26px 70px rgba(67, 84, 76, 0.07);
 }
 
 h1 {
   margin: 0 0 8px;
-  font-size: 30px;
+  color: #2f3939;
+  font-size: 32px;
   line-height: 1.3;
 }
 
 h2 {
   margin: 32px 0 8px;
+  color: #374342;
   font-size: 20px;
   line-height: 1.5;
 }
@@ -102,7 +131,7 @@ ul {
 .app-name,
 .dates,
 .muted {
-  color: #63716a;
+  color: #78827f;
 }
 
 .app-name,
@@ -121,33 +150,48 @@ ul {
 .link-list {
   display: grid;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 30px;
 }
 
 .link-card {
   display: block;
-  padding: 16px 18px;
+  padding: 18px 20px;
   color: inherit;
-  background: #f7faf8;
-  border: 1px solid #e1e8e4;
-  border-radius: 14px;
+  background: #faf9f7;
+  border: 1px solid rgba(109, 146, 127, 0.13);
+  border-radius: 16px;
   text-decoration: none;
 }
 
 .link-card strong {
   display: block;
   margin-bottom: 2px;
-  color: #287a5b;
+  color: #536f61;
+}
+
+.link-card span {
+  display: block;
+  color: #78827f;
+  font-size: 14px;
 }
 
 .link-card:hover {
-  border-color: #b8cdc3;
+  border-color: #b5c3bc;
+  box-shadow: 0 12px 30px rgba(67, 84, 76, 0.06);
 }
 
 .site-footer {
   padding: 0 4px 32px;
-  color: #63716a;
+  color: #78827f;
   font-size: 14px;
+}
+
+.page-kicker {
+  margin: 0 0 8px;
+  color: #6d927f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
 }
 
 .site-footer p {
@@ -158,7 +202,7 @@ ul {
   .site-header {
     align-items: flex-start;
     gap: 8px 16px;
-    padding: 16px 20px 0;
+    padding: 18px 20px 0;
   }
 
   .site-nav {
@@ -170,9 +214,10 @@ ul {
   main {
     width: 100%;
     margin: 16px 0;
-    padding: 24px 20px 36px;
+    padding: 30px 20px 40px;
     border-inline: 0;
     border-radius: 0;
+    box-shadow: none;
   }
 
   h1 {
